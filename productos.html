@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Página de Productos</title>
+  <link rel="stylesheet" href="productos.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <i class="fas fa-paw"></i>
+      <h1>Dejando Huellas Necochea</h1>
+    </div>
+  </header>
+  <nav>
+    <ul>
+      <li><a href="#section-zapatillas-nike">Zapatillas Nike</a></li>
+      <li><a href="#section-adidas">Adidas</a></li>
+      <li><a href="contacto.html">Contacto</a></li>
+    </ul>
+    <div class="cart">
+      <span class="cart-count">0</span>
+    </div>
+  </nav>
+  <main>
+    <section id="section-zapatillas-nike">
+      <h2>Zapatillas Nike</h2>
+      <div class="product">
+        <article class="product-info">
+          <img src="zapatillas_nike_1 - copia.jpeg" alt="Zapatillas Nike 1">
+          <p>Las zapatillas Nike son conocidas por su calidad y estilo. Son ideales para actividades deportivas o uso casual. Ofrecen comodidad y durabilidad. ¡No te arrepentirás de tener unas zapatillas Nike en tu colección!</p>
+        </article>
+        <article class="product-info">
+          <img src="zapatillas_nike_2 - copia.jpeg" alt="Zapatillas Nike 2">
+          <p>Las zapatillas Nike son famosas por su innovación en tecnología y diseño. Cada modelo está diseñado para brindar un rendimiento óptimo y un aspecto moderno. ¡Prueba unas zapatillas Nike y experimenta la diferencia!</p>
+        </article>
+        <article class="product-info">
+          <img src="zapatillas_nike_3 - copia.jpeg" alt="Zapatillas Nike 3">
+          <p>Si buscas zapatillas de calidad y estilo, Nike es la elección perfecta. Su amplia gama de modelos ofrece opciones para cada actividad y gusto personal. ¡Atrévete a lucir unas zapatillas Nike y destaca donde vayas!</p>
+        </article>
+        <article class="product-info">
+          <img src="zapatillas_nike_4 - copia.jpeg" alt="Zapatillas Nike 4">
+          <p>Las zapatillas Nike son conocidas por su comodidad y ajuste. Además, su diseño moderno y atractivo las convierte en una opción popular entre los amantes del calzado. ¡Descubre el confort y estilo de las zapatillas Nike!</p>
+        </article>
+        <button class="wishlist-button" onclick="addToWishlist('Zapatillas Nike 1')">
+          <i class="fas fa-heart"></i> Agregar a lista de deseos
+        </button>
+      </div>
+      <!-- Repite el bloque .product-info para cada imagen de zapatillas Nike -->
+    </section>
+    <section id="section-adidas">
+      <h2>Adidas</h2>
+      <div class="product">
+        <article class="product-info">
+          <img src="adidas - copia.jpeg" alt="Adidas 1">
+          <p>Las zapatillas Adidas son reconocidas por su calidad y diseño. Cada par de zapatillas Adidas combina estilo y funcionalidad. Disfruta de la comodidad y el rendimiento de las zapatillas Adidas en tus actividades diarias o deportivas.</p>
+        </article>
+        <article class="product-info">
+          <img src="adidas.jpeg" alt="Adidas 2">
+          <p>Adidas es una marca líder en el mercado de calzado deportivo. Sus zapatillas destacan por su durabilidad, tracción y amortiguación. Elige unas zapatillas Adidas y experimenta el equilibrio perfecto entre estilo y rendimiento.</p>
+        </article>
+        <article class="product-info">
+          <img src="adidas2 - copia.jpeg" alt="Adidas 3">
+          <p>Las zapatillas Adidas son populares entre los amantes del deporte y la moda. Con su distintivo logotipo y diseño moderno, las zapatillas Adidas se adaptan a cualquier estilo. ¡Haz una declaración de estilo con unas zapatillas Adidas!</p>
+        </article>
+        <article class="product-info">
+          <img src="adidas3 - copia.jpeg" alt="Adidas 4">
+          <p>Las zapatillas Adidas ofrecen una amplia variedad de opciones para cada ocasión. Ya sea que necesites zapatillas para correr, entrenar o simplemente para lucir bien, Adidas tiene el modelo perfecto para ti. ¡Descubre el confort y el estilo de las zapatillas Adidas!</p>
+        </article>
+        <button class="wishlist-button" onclick="addToWishlist('Adidas 1')">
+          <i class="fas fa-heart"></i> Agregar a lista de deseos
+        </button>
+      </div>
+      <!-- Repite el bloque .product-info para cada imagen de Adidas -->
+    </section>
+  </main>
+  <footer>
+    <h3>Lista de Deseos</h3>
+    <ul class="wishlist" id="wishlist">
+      <!-- Los productos agregados a la lista de deseos se mostrarán aquí -->
+    </ul>
+  </footer>
+  <script src="productos.js"></script>
+</body>
+</html>

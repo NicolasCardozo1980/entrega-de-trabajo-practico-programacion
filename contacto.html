@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Enlace a un archivo CSS externo llamado "styles.css" -->
+</head>
+<body>
+    <header>
+        <h1>COMUNICATE CON LA EMPRESA</h1> <!-- Título principal del encabezado -->
+        <a href="#" id="cartLink"><i class="fas fa-shopping-cart"></i></a> <!-- Enlace al carrito de compras con un ícono de carrito -->
+    </header>
+
+    <main>
+        <div class="form-container">
+            <h2>Formulario de Contacto</h2> <!-- Título del formulario de contacto -->
+            <form id="myForm"> <!-- Formulario de contacto con un identificador "myForm" -->
+                <label for="name">Nombre:</label> <!-- Etiqueta y campo de entrada para el nombre -->
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label> <!-- Etiqueta y campo de entrada para el correo electrónico -->
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Mensaje:</label> <!-- Etiqueta y área de texto para el mensaje -->
+                <textarea id="message" name="message" rows="5" required></textarea>
+
+                <button type="submit">Enviar</button> <!-- Botón de envío del formulario -->
+            </form>
+        </div>
+
+        <div class="social-icons">
+            <a href="https://api.whatsapp.com/send?phone=5492262515244"><i class="fab fa-whatsapp"></i> WhatsApp: +54 9 2262 515244</a> <!-- Enlace a WhatsApp con un ícono de WhatsApp -->
+            <a href="https://instagram.com/dejandohuellasnec"><i class="fab fa-instagram"></i> Instagram: dejandohuellasnec</a> <!-- Enlace a Instagram con un ícono de Instagram -->
+        </div>
+
+        <img src="logo_zapateria.jpeg" alt="Logo" class="logo"> <!-- Imagen del logotipo de la zapatería con una clase "logo" -->
+
+        <div class="product-details">
+            <h2>Detalles del producto</h2> <!-- Título de los detalles del producto -->
+            <label for="size">Talla:</label> <!-- Etiqueta y selección de tamaño del producto -->
+            <select id="size">
+                <option value="S">S</option>
+                <option value="M">M</option>
+                <option value="L">L</option>
+            </select>
+
+            <label for="color">Color:</label> <!-- Etiqueta y selección de color del producto -->
+            <select id="color">
+                <option value="Red">Rojo</option>
+                <option value="Blue">Azul</option>
+                <option value="Green">Verde</option>
+            </select>
+
+            <label for="brand">Marca:</label> <!-- Etiqueta y selección de marca del producto -->
+            <select id="brand">
+                <option value="Nike">Nike</option>
+                <option value="Adidas">Adidas</option>
+                <option value="Puma">Puma</option>
+            </select>
+
+            <button id="addToCart"><i class="fas fa-shopping-cart"></i> Agregar al carrito</button> <!-- Botón para agregar el producto al carrito de compras con un ícono de carrito -->
+        </div>
+    </main>
+
+    <footer>
+        <!-- Contenido del pie de página -->
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"></script> <!-- Enlace a la biblioteca Font Awesome para los íconos -->
+    <script src="script.js"></script> <!-- Enlace a un archivo JavaScript externo llamado "script.js" -->
+</body>
+</html>
