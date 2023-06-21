@@ -1,10 +1,32 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <meta charset="UTF-8">
+  <meta name="description" content="Página de Productos">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Página de Productos</title>
-  <link rel="stylesheet" href="productos.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css\productos.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <style>
+    body {
+      background: linear-gradient(45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+      background-size: 400% 400%;
+      animation: gradient 15s ease infinite;
+    }
+
+    @keyframes gradient {
+      0% {
+        background-position: 0% 50%;
+      }
+      50% {
+        background-position: 100% 50%;
+      }
+      100% {
+        background-position: 0% 50%;
+      }
+    }
+  </style>
 </head>
 <body>
   <header>
@@ -13,14 +35,49 @@
       <h1>Dejando Huellas Necochea</h1>
     </div>
   </header>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#"></a>
+    <!-- Botón de navegación móvil -->
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <!-- Elementos de navegación -->
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="#inicio"><i class="fas fa-home"></i> Inicio</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="productos.html"><i class="fas fa-shopping-bag"></i> Productos</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="contacto.html"><i class="fas fa-envelope"></i> Contacto</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  
   <nav>
     <ul>
       <li><a href="#section-zapatillas-nike">Zapatillas Nike</a></li>
       <li><a href="#section-adidas">Adidas</a></li>
       <li><a href="contacto.html">Contacto</a></li>
     </ul>
-    <div class="cart">
-      <span class="cart-count">0</span>
+    <div class="container">
+      <div class="row">
+        <!-- Elementos generados a partir del JSON -->
+        <main id="items" class="col-sm-8 row"></main>
+        <!-- Carrito -->
+        <aside class="col-sm-4">
+          <h2>Carrito</h2>
+          <!-- Elementos del carrito -->
+          <ul id="carrito" class="list-group"></ul>
+          <hr>
+          <!-- Precio total -->
+          <p class="text-right">Total: <span id="total"></span> ARS</p>
+          <button id="boton-vaciar" class="btn btn-danger">Vaciar</button>
+        </aside>
+      </div>
     </div>
   </nav>
   <main>
@@ -28,59 +85,100 @@
       <h2>Zapatillas Nike</h2>
       <div class="product">
         <article class="product-info">
-          <img src="zapatillas_nike_1 - copia.jpeg" alt="Zapatillas Nike 1">
-          <p>Las zapatillas Nike son conocidas por su calidad y estilo. Son ideales para actividades deportivas o uso casual. Ofrecen comodidad y durabilidad. ¡No te arrepentirás de tener unas zapatillas Nike en tu colección!</p>
+          <img src="imagenes/zapatillas_nike_1 - copia.jpeg" alt="Zapatillas Nike 1">
+          <p>Las zapatillas Nike 1 son perfectas para el deporte.</p>
+          <h3>Zapatillas Nike 1</h3>
+          <p class="precio">1500 ARS</p>
+          <button class="btn btn-primary">Añadir al carrito</button>
         </article>
         <article class="product-info">
-          <img src="zapatillas_nike_2 - copia.jpeg" alt="Zapatillas Nike 2">
-          <p>Las zapatillas Nike son famosas por su innovación en tecnología y diseño. Cada modelo está diseñado para brindar un rendimiento óptimo y un aspecto moderno. ¡Prueba unas zapatillas Nike y experimenta la diferencia!</p>
+          <img src="imagenes/zapatillas_nike_3 - copia.jpeg" alt="Zapatillas Nike 2">
+          <p>Las zapatillas Nike 2 son ideales para correr.</p>
+          <h3>Zapatillas Nike 2</h3>
+          <p class="precio">2000 ARS</p>
+          <button class="btn btn-primary">Añadir al carrito</button>
         </article>
         <article class="product-info">
-          <img src="zapatillas_nike_3 - copia.jpeg" alt="Zapatillas Nike 3">
-          <p>Si buscas zapatillas de calidad y estilo, Nike es la elección perfecta. Su amplia gama de modelos ofrece opciones para cada actividad y gusto personal. ¡Atrévete a lucir unas zapatillas Nike y destaca donde vayas!</p>
+          <img src="imagenes/zapatillas_nike_4.jpeg" alt="Zapatillas Nike 3">
+          <p>Las zapatillas Nike 3 son cómodas para el día a día.</p>
+          <h3>Zapatillas Nike 3</h3>
+          <p class="precio">1800 ARS</p>
+          <button class="btn btn-primary">Añadir al carrito</button>
         </article>
         <article class="product-info">
-          <img src="zapatillas_nike_4 - copia.jpeg" alt="Zapatillas Nike 4">
-          <p>Las zapatillas Nike son conocidas por su comodidad y ajuste. Además, su diseño moderno y atractivo las convierte en una opción popular entre los amantes del calzado. ¡Descubre el confort y estilo de las zapatillas Nike!</p>
+          <img src="imagenes/zapatillas_nike_5.jpeg" alt="Zapatillas Nike 4">
+          <p>Las zapatillas Nike 4 son resistentes y duraderas.</p>
+          <h3>Zapatillas Nike 4</h3>
+          <p class="precio">2200 ARS</p>
+          <button class="btn btn-primary">Añadir al carrito</button>
         </article>
-        <button class="wishlist-button" onclick="addToWishlist('Zapatillas Nike 1')">
-          <i class="fas fa-heart"></i> Agregar a lista de deseos
-        </button>
+        <article class="product-info">
+          <img src="imagenes/zapatillas_nike_5.jpeg" alt="Zapatillas Nike 5">
+          <p>Las zapatillas Nike 5 son ideales para el running.</p>
+          <h3>Zapatillas Nike 5</h3>
+          <p class="precio">1900 ARS</p>
+          <button class="btn btn-primary">Añadir al carrito</button>
+        </article>
+        <article class="product-info">
+          <img src="imagenes\zapatillas_nike_6.jpeg" alt="Zapatillas Nike 6">
+          <p>Las zapatillas Nike 6 brindan comodidad y estilo.</p>
+          <h3>Zapatillas Nike 6</h3>
+          <p class="precio">2100 ARS</p>
+          <button class="btn btn-primary">Añadir al carrito</button>
+        </article>
       </div>
-      <!-- Repite el bloque .product-info para cada imagen de zapatillas Nike -->
     </section>
     <section id="section-adidas">
       <h2>Adidas</h2>
       <div class="product">
         <article class="product-info">
-          <img src="adidas - copia.jpeg" alt="Adidas 1">
-          <p>Las zapatillas Adidas son reconocidas por su calidad y diseño. Cada par de zapatillas Adidas combina estilo y funcionalidad. Disfruta de la comodidad y el rendimiento de las zapatillas Adidas en tus actividades diarias o deportivas.</p>
+          <img src="imagenes\adidas - copia.jpeg" alt="Zapatillas Adidas 1">
+          <p>Las zapatillas Adidas 1 son perfectas para el deporte.</p>
+          <h3>Zapatillas Adidas 1</h3>
+          <p class="precio">1800 ARS</p>
+          <button class="btn btn-primary">Añadir al carrito</button>
         </article>
         <article class="product-info">
-          <img src="adidas.jpeg" alt="Adidas 2">
-          <p>Adidas es una marca líder en el mercado de calzado deportivo. Sus zapatillas destacan por su durabilidad, tracción y amortiguación. Elige unas zapatillas Adidas y experimenta el equilibrio perfecto entre estilo y rendimiento.</p>
+          <img src="imagenes\adidas.jpeg" alt="Zapatillas Adidas 2">
+          <p>Las zapatillas Adidas 2 son ideales para correr.</p>
+          <h3>Zapatillas Adidas 2</h3>
+          <p class="precio">2200 ARS</p>
+          <button class="btn btn-primary">Añadir al carrito</button>
         </article>
         <article class="product-info">
-          <img src="adidas2 - copia.jpeg" alt="Adidas 3">
-          <p>Las zapatillas Adidas son populares entre los amantes del deporte y la moda. Con su distintivo logotipo y diseño moderno, las zapatillas Adidas se adaptan a cualquier estilo. ¡Haz una declaración de estilo con unas zapatillas Adidas!</p>
+          <img src="imagenes\adidas2 - copia.jpeg" alt="Zapatillas Adidas 3">
+          <p>Las zapatillas Adidas 3 brindan estilo y comodidad.</p>
+          <h3>Zapatillas Adidas 3</h3>
+          <p class="precio">1900 ARS</p>
+          <button class="btn btn-primary">Añadir al carrito</button>
         </article>
         <article class="product-info">
-          <img src="adidas3 - copia.jpeg" alt="Adidas 4">
-          <p>Las zapatillas Adidas ofrecen una amplia variedad de opciones para cada ocasión. Ya sea que necesites zapatillas para correr, entrenar o simplemente para lucir bien, Adidas tiene el modelo perfecto para ti. ¡Descubre el confort y el estilo de las zapatillas Adidas!</p>
+          <img src="imagenes\adidas2.jpeg" alt="Zapatillas Adidas 4">
+          <p>Las zapatillas Adidas 4 destacan por su calidad.</p>
+          <h3>Zapatillas Adidas 4</h3>
+          <p class="precio">2100 ARS</p>
+          <button class="btn btn-primary">Añadir al carrito</button>
         </article>
-        <button class="wishlist-button" onclick="addToWishlist('Adidas 1')">
-          <i class="fas fa-heart"></i> Agregar a lista de deseos
-        </button>
+        <article class="product-info">
+          <img src="imagenes\adidas3.jpeg" alt="Zapatillas Adidas 5">
+          <p>Las zapatillas Adidas 5 son versátiles y modernas.</p>
+          <h3>Zapatillas Adidas 5</h3>
+          <p class="precio">2000 ARS</p>
+          <button class="btn btn-primary">Añadir al carrito</button>
+        </article>
+        <article class="product-info">
+          <img src="imagenes\adidas - copia.jpeg" alt="Zapatillas Adidas 6">
+          <p>Las zapatillas Adidas 6 ofrecen un gran rendimiento.</p>
+          <h3>Zapatillas Adidas 6</h3>
+          <p class="precio">2300 ARS</p>
+          <button class="btn btn-primary">Añadir al carrito</button>
+        </article>
       </div>
-      <!-- Repite el bloque .product-info para cada imagen de Adidas -->
     </section>
   </main>
   <footer>
-    <h3>Lista de Deseos</h3>
-    <ul class="wishlist" id="wishlist">
-      <!-- Los productos agregados a la lista de deseos se mostrarán aquí -->
-    </ul>
+    <p>Dejando Huellas &copy; 2023</p>
   </footer>
-  <script src="productos.js"></script>
+  <script src="js\productos.js"></script>
 </body>
 </html>
