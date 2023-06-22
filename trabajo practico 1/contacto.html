@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <!-- Enlace a la biblioteca Font Awesome desde Internet -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/css/bootstrap.min.css">
+    <!-- Enlace a la biblioteca Bootstrap desde Internet -->
+    <link rel="stylesheet" href="css/contactos.css">
+    <!-- Enlace a un archivo CSS externo llamado "contactos.css" -->
+    <style>
+        /* Estilos adicionales */
+        header {
+            position: relative;
+            text-align: center;
+            background-color: #f8f9fa;
+            padding: 20px;
+            margin-bottom: 0;
+        }
+
+        header::before {
+            content: "";
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 100%;
+            height: 80px;
+            background-image: url("imagenes/huellas.png");
+            background-repeat: repeat-x;
+            z-index: -1;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1><i class="fas fa-paw"></i> DEJANDO HUELLAS NECOCHEA</h1>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="#"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="tp1.html"><i class="fas fa-home"></i> Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="productos.html"><i class="fas fa-shopping-bag"></i> Productos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contacto.html"><i class="fas fa-envelope"></i> Contacto</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="form-container">
+            <h2>Formulario de Contacto</h2>
+            <form id="myForm">
+                <label for="name">Nombre:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Mensaje:</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+
+                <button type="submit">Enviar</button>
+            </form>
+        </div>
+
+        <div class="social-icons">
+            <a href="https://api.whatsapp.com/send?phone=5492262515244" target="_blank"
+                rel="noopener noreferrer"><i class="fab fa-whatsapp"></i> WhatsApp: +54 9 2262 515244</a>
+            <a href="https://instagram.com/dejandohuellasnec" target="_blank"
+                rel="noopener noreferrer"><i class="fab fa-instagram"></i> Instagram: dejandohuellasnec</a>
+        </div>
+
+        <img src="imagenes/logo_zapateria.jpeg" alt="Logo" class="logo">
+    </main>
+
+    <footer>
+        <!-- Contenido del pie de página -->
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>

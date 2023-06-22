@@ -1,0 +1,277 @@
+/* Estilos generales */
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(45deg, #f3d0e7, #ffa5ab, #ffd3b6, #fcf6bd, #c8e8e3, #9fd8df);
+    background-size: 600% 600%;
+    animation: gradientAnimation 20s ease infinite;
+}
+
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 30px;
+    text-align: center;
+}
+
+.cart-icon {
+    color: #333;
+    font-size: 24px;
+}
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.form-container h2 {
+    margin-bottom: 10px;
+    font-size: 20px;
+    text-align: center;
+}
+
+.form-container form {
+    width: 80%;
+}
+
+.form-container label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-container input,
+.form-container textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.form-container button {
+    padding: 10px 20px;
+    background-color: #333;
+    color: #715858;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.form-container button:hover {
+    background-color: #555;
+}
+
+.social-icons {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.social-icons a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #333;
+}
+
+.social-icons i {
+    margin-right: 10px;
+}
+
+.logo {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 20px;
+}
+
+.cart-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1.)
+}
+
+.cart-container h2 {
+margin-bottom: 10px;
+font-size: 20px;
+text-align: center;
+}
+
+.cart-container table {
+width: 100%;
+border-collapse: collapse;
+}
+
+.cart-container th,
+.cart-container td {
+padding: 10px;
+text-align: center;
+border-bottom: 1px solid #ccc;
+}
+
+.cart-container th {
+background-color: #f9f9f9;
+}
+
+.cart-container td {
+color: #333;
+}
+
+.cart-container .total-row {
+font-weight: bold;
+}
+
+.footer {
+display: flex;
+align-items: center;
+justify-content: center;
+width: 100%;
+padding: 20px;
+background-color: #fff;
+box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.footer p {
+margin: 0;
+}
+
+@media (max-width: 768px) {
+.container {
+flex-direction: column;
+padding: 10px;
+}.form-container {
+    width: 100%;
+}
+
+.form-container form {
+    width: 100%;
+}
+}
+
+@media (max-width: 576px) {
+header h1 {
+font-size: 24px;
+}
+
+css
+Copy code
+.logo {
+    width: 80px;
+    height: 80px;
+}
+}
+
+@media (prefers-color-scheme: dark) {
+body {
+background-color: #333;
+color: #fff;
+}
+
+css
+Copy code
+header {
+    background-color: #333;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+}
+
+header h1 {
+    color: #fff;
+}
+
+.form-container {
+    background-color: #333;
+    color: #fff;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+}
+
+.form-container label {
+    color: #fff;
+}
+
+.form-container input,
+.form-container textarea {
+    background-color: #555;
+    color: #fff;
+    border: 1px solid #777;
+}
+
+.form-container button {
+    background-color: #715858;
+    color: #fff;
+}
+
+.social-icons a {
+    color: #fff;
+}
+
+.cart-container {
+    background-color: #333;
+    color: #fff;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+}
+
+.cart-container th {
+    background-color: #555;
+    color: #fff;
+}
+
+.cart-container td {
+    color: #fff;
+}
+
+.footer {
+    background-color: #333;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+}
+
+.footer p {
+    color: #fff;
+}
+}
