@@ -5,7 +5,24 @@ body {
   padding: 0;
 }
 
-h1, h2 {
+h1 {
+  font-family: 'Pacifico';
+  color: white;
+  animation: neon 5s infinite;
+}
+
+@keyframes neon {
+  0%, 39%, 41%, 59%, 61%, 100% {
+    text-shadow:
+      0 0 24px #ff3aad,
+      0 0 12px white;
+  }
+  40%, 60% {
+    text-shadow: none;
+  }
+}
+
+h2 {
   text-align: center;
 }
 
@@ -46,6 +63,20 @@ nav ul li {
 nav ul li a {
   color: #fff;
   text-decoration: none;
+  animation: neon 5s infinite;
+  font-size: 18px;
+}
+
+@keyframes neon {
+  0%, 39%, 41%, 59%, 61%, 100% {
+    text-shadow:
+      0 0 24px #ff3aad,
+     
+      0 0 12px white;
+  }
+  40%, 60% {
+    text-shadow: none;
+  }
 }
 
 nav ul li a:hover {
@@ -91,88 +122,6 @@ main {
 .product-info img {
   width: 100%;
   height: auto;
-}
-
-.precio {
-  font-weight: bold;
-}
-
-/* Estilos adicionales */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: "Roboto", sans-serif;
-}
-
-header {
-  background-color: #333;
-  color: #fff;
-  padding: 1rem;
-}
-
-.logo {
-  display: flex;
-  align-items: center;
-}
-
-.logo i {
-  font-size: 2rem;
-  margin-right: 0.5rem;
-}
-
-nav {
-  background-color: #666;
-  color: #fff;
-  padding: 1rem;
-}
-
-nav ul {
-  list-style: none;
-  display: flex;
-  justify-content: space-between;
-}
-
-nav ul li a {
-  color: #fff;
-  text-decoration: none;
-  padding: 0.5rem;
-}
-
-nav ul li a:hover {
-  background-color: #444;
-}
-
-.container {
-  margin-top: 2rem;
-}
-
-.product {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  margin-bottom: 2rem;
-}
-
-.product-info {
-  flex-basis: calc(33.33% - 1rem);
-  background-color: #f4f4f4;
-  padding: 1rem;
-  margin-bottom: 1rem;
-}
-
-.product-info img {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-  margin-bottom: 1rem;
-}
-
-.product-info h3 {
-  margin-bottom: 0.5rem;
 }
 
 .precio {
